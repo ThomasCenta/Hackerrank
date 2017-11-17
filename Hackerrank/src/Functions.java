@@ -227,7 +227,7 @@ public class Functions {
 		return modMultiply(n, next2 , mod);
 	}
 	
-	private static int bernoulliMod(int n, int mod) {
+	public static int bernoulliMod(int n, int mod) {
 		if(n % 2 == 1 && n > 10) {
 			return 0;
 		}
@@ -249,7 +249,7 @@ public class Functions {
 		return result;
 	}
 	
-	private static BigFraction bernoulli(int n) {
+	public static BigFraction bernoulli(int n) {
 		if(n % 2 == 1 && n > 10) {
 			return new BigFraction(0,1);
 		}
