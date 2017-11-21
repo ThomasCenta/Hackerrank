@@ -4,8 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import Functions.HarderMathFunctions;
-import Functions.ModFunctions;
+import functions.HarderMathFunctions;
+import functions.ModFunctions;
 
 public class BernoulliModTests {
 
