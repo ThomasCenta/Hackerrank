@@ -31,9 +31,11 @@ public class HarderMathFunctions {
 				} else {
 					jSum = ModFunctions.modSubtract(jSum, ModFunctions.modMultiply(jPowN,bInt, mod), mod);
 				}
-				bInt = ModFunctions.modDivide(ModFunctions.modMultiply(bInt,ModFunctions.modSubtract(k,j,mod),mod),ModFunctions.modAdd(j,1,mod),mod);
+				int multiplyBy = ModFunctions.modDivide(ModFunctions.modSubtract(k,j,mod),ModFunctions.modAdd(j,1,mod), mod);
+				bInt = ModFunctions.modMultiply(bInt,multiplyBy, mod);
 			}
 			result = ModFunctions.modAdd(result, ModFunctions.modDivide(jSum, ModFunctions.modAdd(k,1,mod), mod), mod);
+			//System.out.println(result);
 		}
 		return result;
 	}
@@ -62,6 +64,7 @@ public class HarderMathFunctions {
 			}
 			result = result.add(jSum.divide(new BigInteger("" + (k + 1))));
 			result.simplify();
+			//System.out.println(result+" "+result.modForm(11).toString());
 		}
 		return result;
 	}
@@ -96,5 +99,12 @@ public class HarderMathFunctions {
 			sum = ModFunctions.modAdd(sum, ModFunctions.powMod(i, p, mod), mod);
 		}
 		return sum;
+	}
+	
+	public static void main(String[] args) {
+			int mod = 11;
+			//System.out.println(bernoulli(4)+ " "+bernoulli(4).modForm(mod));
+			System.out.println(bernoulliMod(4,mod));
+		
 	}
 }
