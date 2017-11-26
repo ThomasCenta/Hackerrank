@@ -1,6 +1,6 @@
 package classes;
 
-public class SortedLinkedList {
+public class SortedLinkedListMedian {
 
 	private class Node{
 		public Node previous;
@@ -13,13 +13,11 @@ public class SortedLinkedList {
 	private Node medianUpper;
 	private Node head;
 	private Node end;
-	private int size; 
 	
 	//requires at least one value
-	public SortedLinkedList() {
+	public SortedLinkedListMedian() {
 		this.head = new Node();
 		this.end = new Node();
-		this.size = 0;
 		this.head.previous = null;
 		this.head.next = this.end;
 		this.end.previous = this.head;
